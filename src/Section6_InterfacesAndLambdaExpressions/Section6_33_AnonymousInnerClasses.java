@@ -13,10 +13,14 @@ public class Section6_33_AnonymousInnerClasses {
 			 System.out.println("this is an anonymous inner class");			
 			}
 		};
+		//Anonymous Inner Class can come useful when making an instance of an object with certain "extras" such 
+		//as overloading methods, without having to actually subclass a class.
 		Section6_33_NonMovableActivityClient nonMovable = new Section6_33_NonMovableActivityClient() {
+			public String variable = "we can store any variables here!";
 			@Override
 			public void doSomething() {
 				// TODO Auto-generated method stub
+				
 				
 			}
 			
