@@ -6,5 +6,4 @@ public class Section6_33_AnimateActivityManager {
 	{
 		item.doSomething();
 	}
-
 }
