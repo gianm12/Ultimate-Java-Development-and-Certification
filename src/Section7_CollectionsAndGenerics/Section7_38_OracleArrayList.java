@@ -2,19 +2,20 @@ package Section7_CollectionsAndGenerics;
 
 public class Section7_38_OracleArrayList<T> {
 
-	private T[] mItems;
+	private T[] mItems;//T means that it can be any type (int, string, double). Read more about it
+	//https://docs.oracle.com/javase/tutorial/java/generics/types.html
 	private int mFilledSpots;
 	public Section7_38_OracleArrayList()
 	{
 		mItems = (T[]) new Object[10];
 		
 	}
-	public void add(String item)
+	public void add(T item)
 	{
-		//System.out.println("im in add method! number is " + item);
+		
 		if(mFilledSpots< mItems.length)
 		{
-			mItems[mFilledSpots] = item;
+			mItems[mFilledSpots] = (T) item;
 			mFilledSpots++;
 		}
 		else
@@ -29,7 +30,7 @@ public class Section7_38_OracleArrayList<T> {
 			add(item);
 		}
 	}
-	public String get(int index)
+	public T get(int index)
 	{
 		return mItems[index];
 	}
